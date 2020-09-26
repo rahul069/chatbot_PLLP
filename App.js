@@ -19,7 +19,8 @@ dataitems = {
 
 function taketheinput(event) {
 	
-	if(event.key === "Enter"){
+
+	if(event.key === "Enter"&&input.value!=""){
 // create a user message block
 		messages.innerHTML += userblock.outerHTML
 		// and change its id
@@ -63,7 +64,7 @@ function reply(inputval) {
 		return "Hi there"
 	}
 	
-	a="";
+	a=null;
 	result.forEach(function(data){
 		if(dataitems.hasOwnProperty(data)){
 			a = "What would you like to know about " + data+ " ?"
@@ -75,6 +76,8 @@ function reply(inputval) {
 	}
 
 
-	return "Sorry! " + inputval + " is not recognised"
+	return "Sorry! I don't understand"
 	
 }
+
+
